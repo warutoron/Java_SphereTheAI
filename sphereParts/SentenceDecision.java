@@ -15,6 +15,7 @@ public class SentenceDecision {
 	
 	// 受け取った台詞の中にJointerファイルの内容が含まれているかを判断
 	public void easySentdencisDicision (String line, String fileAddress) {
+
         File file = new File(fileAddress);
         File[] files = file.listFiles();
         String[] slist = new String[1000];
@@ -27,9 +28,11 @@ public class SentenceDecision {
 			String[] parts = adb.loadAndCreate(rechange3);
 			
 			for (int j=0; j < parts.length; j++) {
+
 				if (line.matches(".*"+ parts[j]+".*")) {
 					slist[j] = parts[j];
 				}
+
 			}
 		}
 	}
@@ -37,21 +40,19 @@ public class SentenceDecision {
 	public void sentdecis_judge (String message, String[] parts) {
 		for (int i=0; i < parts.length; i++) {
 			if (message.matches(".*"+parts[i]+"は" + "" + "だ" + ".*")
-					|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + "に違いない" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + ""))
-					) {
+			|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + "に違いない" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + ""))) {
 			}
 		}
 		for (int i=0; i < parts.length; i++) {
 			if (message.matches(".*"+parts[i]+"は" + "" + "だ" + ".*" + "とおも" + ".*")
-					|| (message.matches(".*"+parts[i]+"は" + "" + "だと思" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + "じゃ" + ".*" + "ない" + "？"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + "じゃ" + ".*" + "ない" + "?"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + "に違いな" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + ""))
-					) {
+			|| (message.matches(".*"+parts[i]+"は" + "" + "だと思" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + "じゃ" + ".*" + "ない" + "？"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + "じゃ" + ".*" + "ない" + "?"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + "に違いな" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + ""))) {
 			}
 		}
 	}
@@ -60,10 +61,9 @@ public class SentenceDecision {
 		
 		for (int i=0; i < parts.length; i++) {
 			if (message.matches(".*"+parts[i]+"は" + "" + "だ" + ".*")
-					|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + "に違いない" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + ""))
-					) {
+			|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + "に違いない" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + ""))) {
 			}
 		}
 		
@@ -72,10 +72,9 @@ public class SentenceDecision {
 	public void sentdecis1(String message, String[] parts){
 		for (int i=0; i < parts.length; i++) {
 			if (message.matches(".*"+parts[i]+"は" + "" + "だ" + ".*")
-					|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + "に違いない" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + ""))
-					) {
+			|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + "に違いない" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + ""))) {
 			}
 		}
 	}
@@ -84,10 +83,9 @@ public class SentenceDecision {
 	public void sentdecis2(String message, String[] parts){
 		for (int i=0; i < parts.length; i++) {
 			if (message.matches(".*"+parts[i]+"は" + "" + "だ" + ".*")
-					|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + "に違いない" + ".*"))
-					|| (message.matches(".*" + parts[i]+"は" + "" + ""))
-					) {
+			|| (message.matches(".*" + parts[i]+"は" + "" + "である" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + "に違いない" + ".*"))
+			|| (message.matches(".*" + parts[i]+"は" + "" + ""))) {
 			}
 		}
 	}

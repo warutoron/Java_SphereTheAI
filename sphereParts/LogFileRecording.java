@@ -10,24 +10,44 @@ public class LogFileRecording {
 	private String filename;
 	
 	// ログファイルを作成する
-	public void logFileMake(){
+	public void logFileMake() {
+
 		String d = dm.toDate();
 		String t = dm.toTime();
 	    File newfile = new File("sphere/memoryFile/memory"+ d + t + ".txt");
 	    setFilename(newfile + "");
-	    try{if (newfile.createNewFile()){}else{}
-	    }catch(IOException e){}
+
+	    try {
+	    	if (newfile.createNewFile()) {
+
+	    	} else {
+
+	    	}
+
+	    } catch (IOException e) {
+
+	    }
+
 	}
+
 	// ファイルに書き込む
-	public void logMemorySet(String phreas, String talkings){
+	public void logMemorySet(String phreas, String talkings) {
+
 		try {
-        FileWriter fstring = new FileWriter(this.filename, true);
-        fstring.write(talkings + "：" + phreas + "\r\n");
-        fstring.close();
-	    }catch(IOException e){}
+	        FileWriter fstring = new FileWriter(this.filename, true);
+	        fstring.write(talkings + "：" + phreas + "\r\n");
+	        fstring.close();
+
+	    } catch (IOException e) {
+
+	    }
+
 	}
+
 	// ファイル名をセット
 	public void setFilename(String newName){
 		this.filename = newName;
+		
 	}
+
 }

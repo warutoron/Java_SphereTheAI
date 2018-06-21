@@ -1,4 +1,5 @@
 package sphereParts;
+
 import javax.swing.JTextArea;
 
 public class SearchOperation {
@@ -13,14 +14,17 @@ public class SearchOperation {
 		String[] ideaChank = adb.messageReorganization(userIdea);
 		String fileName = "vocaburary_list.txt";
 		String[] item = adb.loadAndCreate(fileName);
-		if (!(item==null)) {
+
+		if (!(item == null)) {
+
 			String[] searchs = adb.searchAndMake(item, ideaChank);
-			return searchs;}
+			return searchs;
+
+		}
+
 		return null;
 	}
-	public static void operation2(String[] txts) {
-		
-		
-		
-	}
+
+	public static void operation2(String[] txts) {}
+	
 }
