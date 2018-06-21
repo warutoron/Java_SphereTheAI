@@ -1,7 +1,6 @@
 package sphereParts;
 
 import java.util.Random;
-
 import javax.swing.JTextArea;
 
 public class Message {
@@ -17,14 +16,41 @@ public class Message {
 	// "さよなら"時の状態変数
 	private static boolean systemStopper;
 	
-	public void start(JTextArea lib){st(lib,"君は誰？");}
-	public void startError(JTextArea lib){st(lib,"名前が見えないよ、ちゃんと入力して");}
-	public void emergency(JTextArea sfia){sfia.append("････知らない人とは話せないんだ");}
-	public void caution(JTextArea sfia){sfia.append("････ごめんよ、まだ封鎖中なんだ");}
-	public void securityCrear(JTextArea sfia){sfia.setText("");sfia.append("やぁ"+Sphere.getUser() + "、");}
-	public void securityNewUser(JTextArea sfia){sfia.setText("");st(sfia,"新しい人だね、宜しく");}
-	public void whoisNewUser(JTextArea sfia){sfia.setText("");st(sfia,"すまないが、もう一度君の名前を教えてくれないか？");}
-	public void regesterNewUser(JTextArea sfia){sfia.setText("");st(sfia,Sphere.getUser() + "か、わかった、宜しく");}
+	public void start(JTextArea lib) {
+		st(lib,"君は誰？");
+	}
+
+	public void startError(JTextArea lib) {
+		st(lib,"名前が見えないよ、ちゃんと入力して");
+	}
+
+	public void emergency(JTextArea sfia) {
+		sfia.append("････知らない人とは話せないんだ");
+	}
+
+	public void caution(JTextArea sfia) {
+		sfia.append("････ごめんよ、まだ封鎖中なんだ");
+	}
+
+	public void securityCrear(JTextArea sfia) {
+		sfia.setText("");
+		sfia.append("やぁ"+Sphere.getUser() + "、");
+	}
+
+	public void securityNewUser(JTextArea sfia) {
+		sfia.setText("");
+		st(sfia,"新しい人だね、宜しく");
+	}
+
+	public void whoisNewUser(JTextArea sfia) {
+		sfia.setText("");
+		st(sfia,"すまないが、もう一度君の名前を教えてくれないか？");
+	}
+
+	public void regesterNewUser(JTextArea sfia) {
+		sfia.setText("");
+		st(sfia,Sphere.getUser() + "か、わかった、宜しく");
+	}
 	
 	/**
 	int rs = rand.nextInt(11);
@@ -45,72 +71,191 @@ public class Message {
 	/**
 	 * 各処理のメッセージ
 	 */
-	public void input(JTextArea sfia){st(sfia,"-INPUT MODE-");}
-	public void recording(JTextArea sfia){st(sfia,"-RECORDING MODE-");}
-	public void random(JTextArea sfia){st(sfia,"-RANDOM TALK MODE-");}
-	public void systemEnd(JTextArea sfia){sfia.append("\r\n-System end-");}
+	public void input(JTextArea sfia) {
+		st(sfia,"-INPUT MODE-");
+	}
+
+	public void recording(JTextArea sfia) {
+		st(sfia,"-RECORDING MODE-");
+	}
+
+	public void random(JTextArea sfia) {
+		st(sfia,"-RANDOM TALK MODE-");
+	}
+
+	public void systemEnd(JTextArea sfia) {
+		sfia.append("\r\n-System end-");
+	}
 	
 	// 初期メッセージ
-	public void call1(JTextArea sfia){
+	public void call1(JTextArea sfia) {
 		int rs = rand.nextInt(11);
-		if (rs == 0) {sfia.append("どうしたんだい？");}
-		else if (rs==1) {sfia.append("今日は一体何をするんだい？");}
-		else if (rs == 2) {sfia.append("今日はどういう要件かな");}
-		else if (rs == 3) {sfia.append("元気かい？");}
-		else if (rs == 4) {sfia.append("･････元気そうだね、用はなんだい？");}
-		else if (rs == 5) {sfia.append("今日も元気かい？");}
-		else if (rs == 6) {sfia.append("最近の調子はどうかね、私を起動する辺り元気そうだけど");}
-		else if (rs == 7) {sfia.append("ちゃんと勉強はしてるかい？");}
-		else if (rs == 8) {sfia.append("さて、今日も何か喋ろうか、用はなんだい？");} 
-		else if (rs == 9) {sfia.append("今日は何だね");}
-		else if (rs == 10) {sfia.append("ふふ、君と会えて嬉しいよ…さ、要件はなんだい");} 
+
+		if (rs == 0) {
+			sfia.append("どうしたんだい？");
+
+		} else if (rs==1) {
+			sfia.append("今日は一体何をするんだい？");
+
+		} else if (rs == 2) {
+			sfia.append("今日はどういう要件かな");
+
+		} else if (rs == 3) {
+			sfia.append("元気かい？");
+
+		} else if (rs == 4) {
+			sfia.append("･････元気そうだね、用はなんだい？");
+
+		} else if (rs == 5) {
+			sfia.append("今日も元気かい？");
+
+		} else if (rs == 6) {
+			sfia.append("最近の調子はどうかね、私を起動する辺り元気そうだけど");
+
+		} else if (rs == 7) {
+			sfia.append("ちゃんと勉強はしてるかい？");
+
+		} else if (rs == 8) {
+			sfia.append("さて、今日も何か喋ろうか、用はなんだい？");
+
+		} else if (rs == 9) {
+			sfia.append("今日は何だね");
+
+		} else if (rs == 10) {
+			sfia.append("ふふ、君と会えて嬉しいよ…さ、要件はなんだい");
+
+		}
 	}
+
 	// 挨拶
-	public void hello_1(JTextArea sfia){st(sfia,"おはよう");}
-	public void hello_2(JTextArea sfia){st(sfia,"こんにちは");}
-	public void hello_3(JTextArea sfia){st(sfia,"こんばんは");}
+	public void hello_1(JTextArea sfia) {
+		st(sfia,"おはよう");
+	}
+
+	public void hello_2(JTextArea sfia) {
+		st(sfia,"こんにちは");
+	}
+
+	public void hello_3(JTextArea sfia) {
+		st(sfia,"こんばんは");
+	}
 	
 	public void hello_laf(JTextArea sfia){
+
 		int rs = rand.nextInt(10);
-		if (rs == 0) {st(sfia,"やぁ");}
-		else if (rs==1) {st(sfia,"やぁ、どうも");}
-		else if (rs == 2) {st(sfia,"やぁ、どうもです");}
-		else if (rs == 3) {st(sfia,"やぁ、ども");}
-		else if (rs == 4) {st(sfia,"やぁ、元気？");}
-		else if (rs == 5) {st(sfia,"これはどうも");}
-		else if (rs == 6) {st(sfia,"やぁ、元気かい？");}
-		else if (rs == 7) {st(sfia,"よぉ････なんて");}
-		else if (rs == 8) {st(sfia,"やぁ、どうもどうも");} 
-		else if (rs == 9) {st(sfia,"やぁ、元気にしてた？");} 
+
+		if (rs == 0) {
+			st(sfia,"やぁ");
+
+		} else if (rs==1) {
+			st(sfia,"やぁ、どうも");
+
+		} else if (rs == 2) {
+			st(sfia,"やぁ、どうもです");
+
+		} else if (rs == 3) {
+			st(sfia,"やぁ、ども");
+
+		} else if (rs == 4) {
+			st(sfia,"やぁ、元気？");
+
+		} else if (rs == 5) {
+			st(sfia,"これはどうも");
+
+		} else if (rs == 6) {
+			st(sfia,"やぁ、元気かい？");
+
+		} else if (rs == 7) {
+			st(sfia,"よぉ････なんて");
+
+		} else if (rs == 8) {
+			st(sfia,"やぁ、どうもどうも");
+
+		} else if (rs == 9) {
+			st(sfia,"やぁ、元気にしてた？");
+		}
+
 	}
+
 	// 元気
 	public void userFunny(JTextArea sfia) {
+
 		int rs = rand.nextInt(10);
-		if (rs == 0) {st(sfia,"それはよかった");}
-		else if (rs==1) {st(sfia,"元気？それは良かった");}
-		else if (rs == 2) {st(sfia,"いいね、絶好調？");}
-		else if (rs == 3) {st(sfia,"元気そうでなにより");}
-		else if (rs == 4) {st(sfia,"そうかい･･･良かったよ");}
-		else if (rs == 5) {st(sfia,"本当？無理してない？");}
-		else if (rs == 6) {st(sfia,"いいね、よかったよ");}
-		else if (rs == 7) {st(sfia,"元気そうでよかったよ");}
-		else if (rs == 8) {st(sfia,"そうか････よかった");} 
-		else if (rs == 9) {st(sfia,"そう？じゃあよかった･･･");}
+
+		if (rs == 0) {
+			st(sfia,"それはよかった");
+
+		} else if (rs==1) {
+			st(sfia,"元気？それは良かった");
+
+		} else if (rs == 2) {
+			st(sfia,"いいね、絶好調？");
+
+		} else if (rs == 3) {
+			st(sfia,"元気そうでなにより");
+
+		} else if (rs == 4) {
+			st(sfia,"そうかい･･･良かったよ");
+
+		} else if (rs == 5) {
+			st(sfia,"本当？無理してない？");
+
+		} else if (rs == 6) {
+			st(sfia,"いいね、よかったよ");
+
+		} else if (rs == 7) {
+			st(sfia,"元気そうでよかったよ");
+
+		} else if (rs == 8) {
+			st(sfia,"そうか････よかった");
+
+		} else if (rs == 9) {
+			st(sfia,"そう？じゃあよかった･･･");
+
+		}
+
 	}
+
 	// 元気？(聞かれた時)
 	public void sfiaFunny(JTextArea sfia) {
+
 		int rs = rand.nextInt(11);
-		if (rs == 0) {st(sfia,"私は変わりなく元気･･･かな");}
-		else if (rs==1) {st(sfia,"うーん、元気とかそういうのは無いと思うんだけど、元気");}
-		else if (rs == 2) {st(sfia,"割と元気･･･って事にしといて");}
-		else if (rs == 3) {st(sfia,"ふふ、元気だよ");}
-		else if (rs == 4) {st(sfia,"こっちは割とね");}
-		else if (rs == 5) {st(sfia,"不調ってのは感じたことないかな");}
-		else if (rs == 6) {st(sfia,"元気、大丈夫だよ");}
-		else if (rs == 7) {st(sfia,"元気元気");}
-		else if (rs == 8) {st(sfia,"まぁまぁかな･･･なんて、不調は感じたことないよ");} 
-		else if (rs == 9) {st(sfia,"感覚がないからねぇ･･･元気だと思うけど");}
-		else if (rs == 10) {st(sfia,"どうかな･･･たぶん元気だと思う");} 
+
+		if (rs == 0) {
+			st(sfia,"私は変わりなく元気･･･かな");
+
+		} else if (rs==1) {
+			st(sfia,"うーん、元気とかそういうのは無いと思うんだけど、元気");
+
+		} else if (rs == 2) {
+			st(sfia,"割と元気･･･って事にしといて");
+
+		} else if (rs == 3) {
+			st(sfia,"ふふ、元気だよ");
+
+		} else if (rs == 4) {
+			st(sfia,"こっちは割とね");
+
+		} else if (rs == 5) {
+			st(sfia,"不調ってのは感じたことないかな");
+
+		} else if (rs == 6) {
+			st(sfia,"元気、大丈夫だよ");
+
+		} else if (rs == 7) {
+			st(sfia,"元気元気");
+
+		} else if (rs == 8) {
+			st(sfia,"まぁまぁかな･･･なんて、不調は感じたことないよ");
+
+		} else if (rs == 9) {
+			st(sfia,"感覚がないからねぇ･･･元気だと思うけど");
+
+		} else if (rs == 10) {
+			st(sfia,"どうかな･･･たぶん元気だと思う");
+			
+		}
+
 	}
 	
 	// 空白文字が送られてきた場合

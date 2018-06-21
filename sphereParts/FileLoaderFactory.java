@@ -8,18 +8,27 @@ public class FileLoaderFactory {
 	FileWriteFactory fwf = new FileWriteFactory();
 	
 	// ファイル名をサーチして配列に格納
-	public String[] searchFileVolume(String addless){
+	public String[] searchFileVolume(String addless) {
+
 		String[] partsBox = new String[1000];
         File file = new File(addless);
         File[] files = file.listFiles();
+
         for (int i=0; i<files.length; i++) {
         	String sfiles = String.valueOf(files[i]);
+
         	if (sfiles == null) {
-        		partsBox[i] = "";	
+        		partsBox[i] = "";
+
+        	} else {
+        		partsBox[i] = sfiles;
+
         	}
-        	else {partsBox[i] = sfiles;}
-        } return partsBox;
+        }
+
+        return partsBox;
 	}
+
 	// IFLM(ファイル内のテキストを読み込み、配列にして格納)
 	public void idiomFileLoadMaker(){
 		
@@ -41,21 +50,24 @@ public class FileLoaderFactory {
 			for (int i=0; i < files.length;i += 3) {
 				
 				if (!(files[i]==null)) {
-				varb = files[i];
-				//fwf.stringWriter("sphere/knowsVocaburary/vocaburary_varb.txt", varb);
-				System.out.println("言葉:"+varb);
-				
-				read = files[i+1];
-				//fwf.stringWriter("sphere/knowsVocaburary/vocaburary_leading.txt", read);
-				System.out.println("読み:"+ read);
-				
-				mean = files[i+2];
-				//fwf.stringWriter("sphere/knowsVocaburary/vocaburary_mean.txt", mean);
-				System.out.println("意味:"+mean);
+					varb = files[i];
+					//fwf.stringWriter("sphere/knowsVocaburary/vocaburary_varb.txt", varb);
+					System.out.println("言葉:"+varb);
+					
+					read = files[i+1];
+					//fwf.stringWriter("sphere/knowsVocaburary/vocaburary_leading.txt", read);
+					System.out.println("読み:"+ read);
+					
+					mean = files[i+2];
+					//fwf.stringWriter("sphere/knowsVocaburary/vocaburary_mean.txt", mean);
+					System.out.println("意味:"+mean);
+
 				} else {
 					files[i] = "";
+
 				}
 			}
+
 		}
 	}
 	
@@ -75,6 +87,4 @@ public class FileLoaderFactory {
 	public String[] pos_standing(){String[] Box = adb.loadAndCreate3("stringJointer/postpositional_standing.txt");return Box;}
 	
 	//public String[] knw_(){String[] Box = adb.loadAndCreate("stringJointer/postpositional_standing.txt");return Box;}
-	
-	//public String[] a(){;return ;}
 }
