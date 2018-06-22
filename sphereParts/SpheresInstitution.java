@@ -16,7 +16,8 @@ public class SpheresInstitution {
 		// 今の気分を返す
 		boolean mind = Sphere.i_So();
 		// 気分情報をメッセージに反映させる
-		msg.basicMessage(items, sfia,mind,ideas);	
+		msg.basicMessage(items, sfia,mind,ideas);
+		
 	}
 	
 	/**
@@ -34,4 +35,5 @@ public class SpheresInstitution {
 		// これを返す
 		return sfiaItem;
 	}
+	
 }

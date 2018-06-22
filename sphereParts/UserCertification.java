@@ -30,6 +30,6 @@ public class UserCertification {
 	        	return true;
 			} 
 		}
-		return false;
+		return true;
 	}
 }
