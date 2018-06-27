@@ -11,11 +11,14 @@ public class UserCertification {
 		
 		// userNameファイルをロードしてユーザ名を確認
 		String[] users = adb.loadAndCreate("userFiles/userName.txt");
+		
 		// ユーザーを検索
 		for(String point : users){
+			
 			// ノーヒット
 			if (point == null){
 				// 何もしない
+				
 			// ヒット
 			} else if (point.equals(user)) {
 				
