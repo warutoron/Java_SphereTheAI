@@ -1,8 +1,10 @@
 package sphereParts;
+
 import javax.swing.JFrame;
 
 public class SystemStart extends JFrame{
 	public static void main(String[] args){
+		
 		MainView frame = new MainView();
 		frame.setTitle("AI-Sphere");
 		frame.setLayout(null);
@@ -10,5 +12,6 @@ public class SystemStart extends JFrame{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setVisible(true);
+		
 	}
 }

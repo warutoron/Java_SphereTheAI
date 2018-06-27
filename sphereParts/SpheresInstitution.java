@@ -35,5 +35,5 @@ public class SpheresInstitution {
 		// これを返す
 		return sfiaItem;
 	}
-	
+
 }
